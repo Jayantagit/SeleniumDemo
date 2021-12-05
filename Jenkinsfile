@@ -11,7 +11,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                 bat 'mvn clean test'
+                git 'https://github.com/Jayantagit/SeleniumDemo.git'
+                 bat 'mvn clean install'
             }
         }
         stage('Deploy') {
