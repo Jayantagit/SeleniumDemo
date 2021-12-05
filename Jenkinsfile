@@ -5,14 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                 bat 'clean install -DskipTests=true'
+                 bat 'mvn clean install -DskipTests=true'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
                 git 'https://github.com/Jayantagit/SeleniumDemo.git'
-                 bat 'clean install'
+                 bat 'mvn clean install'
             }
         }
         stage('Deploy') {
