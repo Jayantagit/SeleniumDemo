@@ -21,7 +21,7 @@ public class ExtentDemo {
 		Assert.assertEquals(true, true);
 	}
 	
-	@Test
+	@Test(enabled=false)
 	public void Payment() {
 
 		System.out.println("Payment");
