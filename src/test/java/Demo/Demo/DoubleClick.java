@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -46,6 +47,12 @@ public class DoubleClick {
 		Actions act = new Actions(driver);
 		act.pause(Duration.ofSeconds(3)).doubleClick(dblBlock).perform();
 		System.out.println(dblBlock.getCssValue("background-color").toString());
+		
+		String color=dblBlock.getCssValue("background-color").toString();
+		String hex=Color.fromString(color).asHex();
+		
+		//Color.fromString(color).getColor().equals(Color.class.)
+	
 		
 		
 		if (dblBlock.getCssValue("background-color").equals("yellow")) {
